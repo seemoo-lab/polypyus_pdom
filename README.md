@@ -11,7 +11,9 @@ In a first step, we export `.pdom` type information into an SQLite database. The
 takes a while, but it can even be aborted and continued later on. Export works as follows:
 
 ```
-java -jar pdom/export/export.jar -P BCM20739-B0.1462220149391.pdom
+chmod +x export/gradlew
+./export/gradlew shadow
+java -jar export/build/libs/PDOM_Export-all.jar -P BCM20739-B0.1462220149391.pdom
 ```
 
 The PDOM import searches for function names in an IDA database, looks them up in the PDOM to search
